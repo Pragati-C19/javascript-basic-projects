@@ -1,18 +1,21 @@
-const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];   //hexadecimal numbers
 const btn = document.getElementById("btn");               // here we can use querySelector also. getElementByID can only select an element by its ID whereas querySelector can select elements by ID, class, or any other type of selector.
 const color = document.querySelector(".color");
 
-btn.addEventListener("click", function () {
-  let hexColor = "#";
-  for (let i = 0; i < 6; i++) {
-    hexColor += hex[getRandomNumber()];
-  }
-  // console.log(hexColor);
+//example we have to get color #f15025
 
+btn.addEventListener("click", function () {
+  let hexColor = "#";              //every color start with # but in our array just hexadecimal number store so here we declare hexColor = # and after that randomly adding hex values and create specific color     
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[getRandomNumber()];       // get random number's value and concatinate it with hexColor (#)
+  }
+  console.log(hexColor);
+
+  document.body.style.backgroundColor = hexColor;     // same as app.js  
   color.textContent = hexColor;
-  document.body.style.backgroundColor = hexColor;
+  
 });
 
-function getRandomNumber() {
-  return Math.floor(Math.random() * hex.length);
+function getRandomNumber() {            
+  return Math.floor(Math.random() * hex.length);       // Logic is same as getRandomNumber function in app.js
 }
