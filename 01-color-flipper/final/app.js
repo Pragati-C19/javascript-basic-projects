@@ -1,5 +1,5 @@
 const colors = ["green", "red", "yellow", "blue"];
-const btn = document.getElementById("btn");
+const btn = document.querySelector(".btn");
 const color = document.querySelector(".color");
 
 btn.addEventListener("click", function () {                 //when user click on check me it navigate to addEventListener for click function. here click is a event follow by function in which what will happen after click function mention
@@ -13,5 +13,5 @@ btn.addEventListener("click", function () {                 //when user click on
 });
 
 function getRandomNumber() {
-  return Math.floor(Math.random() * colors.length) ;     //random function gives value between 0-1. Here we take random value * array length. floor is use for absolute number
+  return Math.floor(Math.random() * colors.length) ;     //random function gives value between 0-1. Here we take random value * array length and the value of this is some float (decimal) value, so we floor is use for absolute number.
 }
