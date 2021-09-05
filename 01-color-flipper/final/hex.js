@@ -6,13 +6,14 @@ const color = document.querySelector(".color");
 
 btn.addEventListener("click", function () {
   let hexColor = "#";              //every color start with # but in our array just hexadecimal number store so here we declare hexColor = # and after that randomly adding hex values and create specific color     
+  
   for (let i = 0; i < 6; i++) {
-    hexColor += hex[getRandomNumber()];       // get random number's value and concatinate it with hexColor (#)
+    hexColor += hex[getRandomNumber()];       // get random number's value and concat it with hexColor (#)
   }
-  console.log(hexColor);
+  //console.log(hexColor);
 
-  document.body.style.backgroundColor = hexColor;     // same as app.js  
-  color.textContent = hexColor;
+  document.body.style.backgroundColor = hexColor;     // navigate and change var in css-> body tag -> bgcolor element   
+  color.textContent = hexColor;                     // display color name generate by hexColor
   
 });
 

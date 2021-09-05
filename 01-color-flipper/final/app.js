@@ -9,7 +9,7 @@ btn.addEventListener("click", function () {                 //when user click on
 
   document.body.style.backgroundColor = colors[randomNumber];    //it navigate to css file in which body style background element is change into color. and bcoz of this bacground change 
   
-  color.textContent = colors[randomNumber];            // textContent is use for display the color name form colors array 
+  color.textContent = colors[randomNumber];            // textContent is use for display the color name from colors array 
 });
 
 function getRandomNumber() {
